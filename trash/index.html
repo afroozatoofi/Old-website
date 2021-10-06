@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title></title>
+		
+        <link href="css/liteaccordion.css" rel="stylesheet" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script src="js/jquery.easing.1.3.js"></script>
+        <script src="js/liteaccordion.jquery.js"></script>
+    </head>
+	<style type="text/css">
+	<!--
+	body,td,th {
+	font-family: Tahoma;
+	font-size: 12px;	
+	}
+	-->
+	</style>
+    <body>
+	  <div id="one">
+            <ol>
+                <li>
+				
+                    <h2><span>درمانگاه خیریه سهامی</span></h2>
+					<div>
+                        <figure>
+                            <img src="img-demo/1.jpg" alt="image" />
+                            <figcaption class="ap-caption"><a href="http://sahamiclinic.com/news.asp" target="_blank" style="color:#FFFFFF ">ادامه مطلب</a></figcaption>
+                        </figure>
+                    </div>
+                    
+                </li>
+                 <li>
+                    <h2><span>تازه های رادیولوژی</span></h2>
+                    <div>
+                        <figure>
+                            <img src="img-demo/2.jpg" alt="image" />
+                            <figcaption class="ap-caption"><a href="http://sahamiclinic.com/newsrad.asp" target="_blank" style="color:#FFFFFF ">ادامه مطلب</a></figcaption>
+                        </figure>
+                    </div>
+                </li>
+                 <li>
+                    <h2><span>تازه های آزمایشگاه</span></h2>
+                    <div>
+                        <figure>
+                            <img src="img-demo/3.jpg" alt="image" />
+                            <figcaption class="ap-caption"><a href="http://sahamiclinic.com/newslab.asp" target="_blank" style="color:#FFFFFF " >ادامه مطلب</a></figcaption>
+                        </figure>
+                    </div>
+                </li>
+                 <li>
+                    <h2><span>تازه های دندانپزشکی</span></h2>
+                    <div>
+                        <figure>
+                            <img src="img-demo/4.jpg" alt="image" />
+                            <figcaption class="ap-caption"><a href="http://sahamiclinic.com/newsdent.asp" target="_blank" style="color:#FFFFFF ">ادامه مطلب</a></figcaption>
+                        </figure>
+                    </div>
+                </li>
+				
+				
+                
+            </ol>
+          
+        </div>
+
+       
+
+               
+        <script>
+            (function($, d) {
+               
+                $('#one').liteAccordion({
+                        onTriggerSlide : function() {
+                            this.find('figcaption').fadeOut();
+                        },
+                        onSlideAnimComplete : function() {
+                            this.find('figcaption').fadeIn();
+                        },
+                        autoPlay : true,
+                        pauseOnHover : true,
+                        theme : 'stitch',
+                        rounded : true,
+                        enumerateSlides : true
+                }).find('figcaption:first').show();
+                $('#two').liteAccordion();
+                $('#three').liteAccordion({ theme : 'dark', rounded : true, enumerateSlides : true, firstSlide : 2, linkable : true, easing: 'easeInOutQuart' });
+                $('#four').liteAccordion({ theme : 'light', firstSlide : 3, easing: 'easeOutBounce', activateOn: 'mouseover' });
+
+               
+                
+            })(jQuery, document);
+
+           
+
+            
+        </script>
+
+    </body>
+</html>
